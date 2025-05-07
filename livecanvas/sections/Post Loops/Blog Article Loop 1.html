@@ -1,0 +1,65 @@
+<section>
+	<div class="container py-6 py-lg-8">
+		<div class="row mb-5 text-center">
+			<div class="col mw-10 mx-auto">
+				<div class="lc-block mb-4">
+					<div editable="rich">
+						<h2 class="display-4 fw-bold ls-n1">Latest From our Blog</h2>
+					</div>
+				</div>
+				<div class="lc-block">
+					<div editable="rich">
+						<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, cupiditate praesentium et laudantium</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="lc-block">
+			<wrapper class="live-shortcode">
+				<tangible>
+					<div id="mygetposts" class="row g-3">
+						<loop type="post" count="8">
+							<div class="col-md-6 mb-5 mb-md-4 position-relative align-content-start">
+								<div class="row g-3">
+									<div class="col-12 col-lg-4">
+										<if field="image">
+											<img src="{Field image_url size='medium'}" class="w-100 img-fluid object-fit-cover" style="aspect-ratio: 1" alt="{Field image_alt}">
+											<else>
+												<img src="https://placehold.co/400x400" class="w-100 img-fluid object-fit-cover" style="aspect-ratio: 1" alt="Placeholder">
+											</else>
+										</if>
+									</div>
+
+									<div class="col-12 col-lg-8">
+										<div class="mb-3">
+											<p class="small mb-1">Posted on the: <span class="text-body text-opacity-50">
+													<field publish_date=""></field>
+												</span></p>
+											<a class="stretched-link" href="{Field url}">
+												<h3 class="fw-bold fs-5">
+													<field title=""></field>
+												</h3>
+											</a>
+										</div>
+										<div class="hstack gap-2 align-items-center">
+											<if field="author_avatar">
+												<img src="{Field author_avatar size='32'}" class="rounded-circle mb-3" alt="Author Avatar">
+												<else>
+													<img src="https://i.pravatar.cc/48" class="rounded-circle mb-3" alt="Placeholder Avatar">
+												</else>
+											</if>
+											<span class="fw-semibold">
+												<field author_full_name=""></field>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</loop>
+					</div>
+				</tangible>
+			</wrapper>
+		</div>
+	</div>
+</section>

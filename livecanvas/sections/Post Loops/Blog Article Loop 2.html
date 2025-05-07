@@ -1,0 +1,51 @@
+<section>
+	<div class="container py-6 py-lg-10">
+		<div class="row">
+			<div class="col-lg-5">
+				<div class="lc-block">
+					<div editable="rich">
+						<h2 class="display-5 fw-bold">Our Latest News and Articles</h2>
+					</div>
+					<div editable="rich">
+						<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, cupiditate praesentium et laudantium</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="lc-block col-lg-7">
+				<wrapper class="live-shortcode">
+					<tangible>
+						<div id="myarchiveposts" class="row g-3">
+							<loop type="post" count="2">
+								<div class="col-md-6 mb-5 mb-md-4 position-relative align-content-start">
+									<div class="row g-3">
+										<div class="col-12">
+											<if field="image">
+												<img src="{Field image_url size='medium'}" class="img-fluid mb-3 w-100 object-fit-cover" style="aspect-ratio:4/3" alt="{Field image_alt}">
+												<else>
+													<img src="https://placehold.co/300x200" class="img-fluid mb-3 w-100 object-fit-cover" style="aspect-ratio:4/3" alt="Placeholder">
+												</else>
+											</if>
+										</div>
+
+										<div class="col-12">
+											<div>
+												<h3 class="fs-5">
+													<field title="">
+													</field>
+												</h3>
+												<field excerpt="" length="20" auto="true">
+													<a href="{Field url}" class="stretched-link">Read More</a>
+												</field>
+											</div>
+										</div>
+									</div>
+								</div>
+							</loop>
+						</div>
+					</tangible>
+				</wrapper>
+			</div>
+		</div>
+	</div>
+</section>

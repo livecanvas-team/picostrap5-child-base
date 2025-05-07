@@ -1,0 +1,93 @@
+<section class="bg-white py-5">
+	<div class="container">
+		<wrapper class="live-shortcode">
+			<tangible>
+				<loop type="post">
+					<div class="lc-block d-grid d-lg-flex gap-lg-5 position-relative" style="min-height:12rem">
+						<div class="col-lg-1 lc-block text-slate-400 fw-light ls-1 mb-2">
+							<field publish_date="" format="F j, Y">
+							</field>
+						</div>
+
+						<div class="lc-block position-relative d-none d-lg-flex flex-column">
+							<svg class="position-absolute start-50 text-gray-300 top-0 translate-middle z-2" xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="currentColor">
+								<path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"></path>
+							</svg>
+							<div class="border-end position-absolute translate-middle top-50 start-50 border-2 h-100 z-1"></div>
+						</div>
+
+						<div class="col-lg lc-block border-bottom border-bottom-lg-0 lc-block mb-6">
+							<div class="lc-block">
+								<h3 class="fw-bold">
+									<a href="{Field url}">
+										<field title="">
+										</field>
+									</a>
+								</h3>
+							</div>
+
+							<div class="lc-block fs-5">
+								<field excerpt="" length="15" auto="true">
+								</field>
+							</div>
+
+							<div class="lc-block fs-5 mb-3 fs-6">
+								<a href="{Field url}">Read more &gt;&gt;</a>
+							</div>
+						</div>
+					</div>
+				</loop>
+			</tangible>
+		</wrapper>
+	</div>
+
+</section>
+
+<section>
+	<div class="lc-block">
+		<wrapper class="live-shortcode">
+			<tangible>
+				<h1 editable="inline">Latest Post</h1>
+				<loop type="post" orderby="date" order="asc" count="1">
+					Ecco la lista dei possibili **Field** che puoi chiamare per un post:
+
+					<field title=""></field>
+					<field content=""> </field>
+					<field excerpt=""> </field>
+					<field url=""> </field>
+					<field id=""> </field>
+					<field post_class=""> </field>
+					<field publish_date=""> </field>
+					<field modify_date=""> </field>
+					<field author=""> </field>
+					<field author_full_name=""> </field>
+
+					<div class="bg-dark py-7 text-white rfs-12">
+
+						<field author_avatar=""> </field>
+					</div>
+
+
+					<field author_avatar=""> </field>
+					<field author_avatar_url=""> </field>
+					<field author_url=""> </field>
+					<field status=""> </field>
+					<field image=""> </field>
+					<field image_url=""> </field>
+					<field image_alt=""> </field>
+					<field image_srcset=""> </field>
+					<field image_sizes=""> </field>
+					<field image_post_class=""> </field>
+					<field parent=""> </field>
+					<field children=""> </field>
+					<field taxonomy=""> </field>
+					<field taxonomy_term=""> </field>
+					<field menu_order=""> </field>
+					<field comment_count=""> </field>
+					<field type=""> </field>
+					<field edit_url=""> </field>
+				</loop>
+			</tangible>
+		</wrapper>
+	</div>
+</section>

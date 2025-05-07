@@ -1,0 +1,123 @@
+<section>
+	<div class="container py-6 py-lg-8">
+		<div class="row mb-5 text-center">
+			<div class="col mw-10 mx-auto">
+				<div class="lc-block mb-4">
+					<div editable="rich">
+						<p class="badge bg-primary mb-2">LATEST NEWS</p>
+					</div>
+					<div editable="rich">
+						<h2 class="display-4 fw-bold ls-n1">News &amp; Articles</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="lc-block">
+			<wrapper class="live-shortcode">
+				<tangible>
+					<div id="lc-grid-article-loop-RANDOMID" class="mb-4 d-grid gap-5">
+						<loop type="post" count="4">
+							<div class="posts_loop position-relative">
+								<div class="post gap-4">
+									<div class="col">
+										<if field="image">
+											<img src="{Field image_url size='large'}" class="img-fluid rounded-3 object-fit-cover w-100" style="aspect-ratio:4/3" alt="{Field image_alt}">
+											<else>
+												<img src="https://placehold.co/600x400" class="img-fluid rounded-3 object-fit-cover w-100" style="aspect-ratio:4/3" alt="Placeholder">
+											</else>
+										</if>
+									</div>
+
+									<div class="content d-flex flex-column">
+										<span class="d-block text-body text-opacity-75 mb-2 lead">
+											<field publish_date="" format="M j, Y">
+											</field>
+										</span>
+										<h3 class="h3 fw-bold mb-1">
+											<a href="{Field url}" class="text-decoration-none stretched-link">
+												<field title="">
+												</field>
+											</a>
+										</h3>
+
+										<div class="excerpt d-block d-lg-none">
+											<field excerpt="" length="20" auto="true">
+											</field>
+										</div>
+									</div>
+								</div>
+							</div>
+						</loop>
+					</div>
+
+					<style>
+            /* Grid layout per i post */
+            #lc-grid-article-loop-RANDOMID {
+              grid-template-columns: 1fr;
+            }
+
+            /* Layout responsivo per schermi grandi */
+            @media (min-width: 992px) {
+              #lc-grid-article-loop-RANDOMID {
+                grid-template-columns: 1fr 1fr;
+              }
+
+              /* Primo post evidenziato */
+              #lc-grid-article-loop-RANDOMID .posts_loop:first-child {
+                grid-column: 1 / 2;
+                grid-row: 1 / 4;
+              }
+
+              #lc-grid-article-loop-RANDOMID .posts_loop:first-child .excerpt {
+                display: block !important;
+              }
+
+              #lc-grid-article-loop-RANDOMID .posts_loop:not(:first-child) {
+                grid-column: 2 / 3;
+                grid-row: auto;
+              }
+            }
+
+            /* Layout dei singoli post */
+            #lc-grid-article-loop-RANDOMID .post {
+              display: grid;
+              grid-template-columns: 192px 1fr;
+            }
+
+            #lc-grid-article-loop-RANDOMID .post img {
+              transition: .5s;
+            }
+
+            /* Hover per ingrandire l'immagine */
+            #lc-grid-article-loop-RANDOMID .post:hover img {
+              transform: scale(1) translateX(0.75rem);
+              transition: .5s;
+            }
+
+            /* Stili specifici per il primo post */
+            @media (min-width: 992px) {
+              #lc-grid-article-loop-RANDOMID .posts_loop:first-child .post {
+                grid-template-columns: 1fr;
+                gap: 10px;
+              }
+
+              #lc-grid-article-loop-RANDOMID .posts_loop:first-child .post:hover img {
+                transform: scale(1) translateY(-0.75rem);
+                transition: .5s;
+              }
+
+              #lc-grid-article-loop-RANDOMID .posts_loop:first-child .post .content h3 {
+                font-size: 2rem;
+              }
+
+              #lc-grid-article-loop-RANDOMID .posts_loop:first-child .post .content p {
+                font-size: 1.2rem;
+              }
+            }
+          </style>
+				</tangible>
+			</wrapper>
+		</div>
+	</div>
+</section>

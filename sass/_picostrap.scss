@@ -1,0 +1,155 @@
+///// PICOSTRAP.SCSS:  
+/// A bunch of small utilities and CSS tweaks, to make
+/// some WordPress elements behave a bit better with Bootstrap.
+/// 
+/// You should not need to edit this file. 
+/// 
+/// 
+/// TO ADD YOUR OWN CODE:
+/// if you need to add your own SCSS / CSS - Edit the sass/_custom.scss file in your CHILD THEME folder.
+/// 
+
+/* ============ LC UTILITY CLASSES  ============ */
+
+// RFS UTILITY: generate classes for responsive font sizes: from rfs-1 to rfs-50
+@for $i from 1 through 50 {
+	.rfs-#{$i} { 
+		@include font-size($i * 0.15rem); 
+	}
+}
+ 
+// RWS UTILITY: generate classes for icon sizes: from rws-1 to rws-50  
+@for $j from 1 through 40 {
+	.rws-#{$j} {
+		width: rfs-fluid-value($j * 1.15rem);
+	}
+}
+
+// FOR LEGACY COMPATIBILITY WITH OLDER CHILD THEMES, INCLUDE COLOR SHADES IF NECESSARY 
+// conditional file import trick, as SASS conditional imports are not possible
+%loadFile {
+	@import "ninjabootstrap/theme_colors_shades"; 
+}
+html {
+	@if not variable-exists('primary-text-emphasis-dark') { //if using bs<= 5.2 - not 5.3 - so on legacy child themes
+		@extend %loadFile;
+		//body {border:5px solid lime} //to test if code is being executed
+	}
+}
+
+/* ============ HEADER HEIGHT VARIABLES  ============ */
+
+:root {
+  --header-height: 56px; // default, customize this value to suit your design
+  --wp-adminbar-height: 32px; // standard, leave untouched
+}
+
+/* ============ SCROLL OFFSET  ============ */
+
+// SCROLL TO ANCHORS WITH OFFSET (when using fixed header) 
+// as per https://css-tricks.com/fixed-headers-and-jump-links-the-solution-is-scroll-margin-top/
+//
+// if customizing menubar, set header height variable accordingly in the code block below
+
+//body.picostrap_header_navbar_position_fixed-top section[id],  //optional, this selector is only for FireFox < 121
+body:has(nav.fixed-top) *[id] {	
+    scroll-margin-top: calc( 28px + var(--header-height));
+}
+
+/* ============ HEADER TWEAKS  ============ */
+
+// FIX SVG LOGO IN HEADER
+.custom-logo-link img[src$='.svg'] {width:100%}
+
+// IMPORTANT NOTE: if body has class picostrap_header_navbar_position_xxx or picostrap_header_navbar_color_choice_xxx then we are not using a custom LC-powered header
+
+// WHEN using built-in header, and HEADER NAVBAR IS set to FIXED TOP, unless it's transparent, 
+// MOVE CONTENT DOWN so it's not hidden by the menubar 
+body.picostrap_header_navbar_position_fixed-top:not(.picostrap_header_navbar_color_choice_bg-transparent) {
+    padding-top: var(--header-height); 
+}
+
+//...Exception for when fixed header is transparent, and viewing Woocommerce templates
+body.picostrap_header_navbar_position_fixed-top.picostrap_header_navbar_color_choice_bg-transparent.woocommerce {
+    padding-top: var(--header-height);   
+}
+
+//...Exception for when fixed header is transparent, and using topbar, move nav bar down a bit
+body.picostrap_topbar_enabled.picostrap_header_navbar_position_fixed-top.picostrap_header_navbar_color_choice_bg-transparent #wrapper-navbar nav.navbar{
+    top:36px;
+}
+//...Exception for when fixed header is transparent, and using topbar, make topbar fixed
+body.picostrap_topbar_enabled.picostrap_header_navbar_position_fixed-top.picostrap_header_navbar_color_choice_bg-transparent #wrapper-topbar {
+    position: fixed;
+    z-index: 999999;
+    width:100%;
+}
+
+// IF THE WP ADMIN BAR IS SHOWN ON TOP, AND NO FIXED TOP NAVIGATIONS,
+// MAKE ROOM FOR IT 
+// This is done in  CSS here, as we disabled (via setup.php) the equivalent inline CSS that WP prints 
+html:has(body.admin-bar):not(:has(.fixed-top)) {
+    margin-top: 32px !important;
+}
+
+// WP ADMIN BAR: IF THERE IS A FIXED TOP ELEMENT LIKE A MENUBAR IN THE PAGE,
+// MOVE THE WP ADMIN BAR AT PAGE BOTTOM
+html:has(.fixed-top) {
+    #wpadminbar { position: fixed; top: auto !important; bottom: 0;}
+    #wpadminbar .quicklinks .menupop .ab-sub-wrapper { bottom: 28px;}
+    #wpadminbar .quicklinks .menupop ul { bottom: 0;}
+}
+
+/* ============ OPTIONAL "SCROLL DETECTION" AND HEADER MODS ============ */
+
+// HOW THIS WORKS:
+// From the Customizer, enable the "Scroll Detection" feature.
+
+// Depending upon scroll position, one of these classes will be added to the body element:
+// scroll-position-at-top / scroll-position-not-at-top
+
+//PAGE HAS NOT SCROLLED YET: MAKE HEADER BIGGER, BUT LEAVE IT TRANSPARENT
+body.scroll-position-at-top  #wrapper-navbar nav.navbar { 
+	padding: 1.01rem 0; 
+}
+
+//PAGE HAS SCROLLED: MAKE HEADER NAVBAR COLOR CHANGE COLOR
+body.scroll-position-not-at-top  #wrapper-navbar nav.navbar { 
+	background-color: $body-bg !important;
+}
+
+//ANIMATION
+ #wrapper-navbar .navbar { 
+	transition: all .5s ease-out;
+}
+
+//EXTRA DEMO
+//body.scroll-position-at-top  {background:lime}
+//body.scroll-position-not-at-top {background:red}
+
+/* ============ OPTIONAL "BACK TO TOP"  ============ */
+
+// "BACK TO TOP" optional BUTTON (Enable from the Customizer)
+#backToTop {
+    visibility: hidden;
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    z-index:99999;
+    opacity:0.6;
+    padding: 3px 11px 7px;
+}
+#backToTop:hover {cursor: pointer}
+
+/* ============ DISABLE AOS for users with a11y OS setting   ============ */
+
+// via https://github.com/michalsnik/aos/issues/482 
+@media (prefers-reduced-motion: reduce) { 
+    [data-aos] {
+	    opacity: 1 !important;
+        transform: none !important; 
+    }
+}
+
+/* ============ DO NOT EDIT THIS FILE: USE THE STARTER CHILD THEME.  ============  */
+

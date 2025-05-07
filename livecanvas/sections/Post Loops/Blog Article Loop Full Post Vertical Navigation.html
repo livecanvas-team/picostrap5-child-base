@@ -1,0 +1,61 @@
+<section>
+	<div class="lc-block">
+		<wrapper class="live-shortcode">
+			<div class=" swiper-container vh-100 overflow-hidden" id="sc-article-loop-RANDOMID">
+				<tangible>
+					<div class="swiper-wrapper">
+						<!-- Each Slide -->
+						<loop type="post" count="8">
+							<div class="swiper-slide position-relative d-flex flex-column justify-content-center align-items-center min-vh-100">
+								<if field="image">
+									<img src="{Field image_url size=full}" class="position-absolute img-fluid object-fit-cover w-100 h-100" alt="{Field image_alt}">
+									<else>
+										<img src="https://placehold.co/600x400" class="position-absolute img-fluid object-fit-cover w-100 h-100" alt="Placeholder">
+									</else>
+								</if>
+								<div class="p-4 bg-body bg-opacity-75 rounded mw-9 z-1">
+									<p class="lead">
+										<field publish_date="" format="F j, Y"></field>
+									</p>
+									<h2 class="fw-semibold mb-1 display-3">
+										<field title="" link="0"></field>
+									</h2>
+									<field excerpt="" length="20" auto="true">
+										<a class="d-inline-flex align-items-center fw-semibold icon-link icon-link-hover" href="{Field url}">
+											Read
+											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+												<path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"></path>
+											</svg>
+										</a>
+									</field>
+								</div>
+							</div>
+						</loop>
+					</div>
+					<!-- Swiper Pagination -->
+					<div class="swiper-pagination"></div>
+				</tangible>
+			</div>
+		</wrapper>
+
+	</div>
+
+	<!-- Lazily load the Swiper CSS file -->
+	<link rel="preload" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+	<!-- Lazily load the Swiper JS file -->
+	<script defer="" src="https://unpkg.com/swiper@8/swiper-bundle.min.js" onload="initializeSwiperRANDOMID();"></script>
+
+	<!-- Initialize Swiper -->
+	<script>
+		function initializeSwiperRANDOMID() {
+			var swiper = new Swiper("#sc-article-loop-RANDOMID", {
+				direction: "vertical",
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+			});
+		}
+	</script>
+</section>

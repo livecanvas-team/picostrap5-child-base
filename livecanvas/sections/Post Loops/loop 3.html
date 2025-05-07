@@ -1,0 +1,50 @@
+<section>
+	<div class="container py-6 py-lg-10">
+		<div class="row">
+			<div class="col-12">
+				<div class="lc-block mb-lg-5">
+					<div editable="rich">
+						<h2 class="display-5 fw-bold ls-n1">Our Latest Articles</h2>
+					</div>
+					<div editable="rich">
+						<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, cupiditate
+							praesentium et laudantium</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="lc-block">
+			<wrapper class="live-shortcode">
+				<tangible>
+					<div class="row g-3">
+						<loop type="post" orderby="date" order="desc" count="9">
+
+							<div class="col-sm-6 col-lg-4 mb-5 position-relative">
+								<div class="row">
+									<div class="col-12">
+
+										<img src="{Field image_url size='medium'}" class="img-fluid mb-3 w-100 object-fit-cover" style="aspect-ratio:4/3" alt="{Field image_alt}">
+
+
+									</div>
+									<div class="col-12">
+										<a class="stretched-link mb-4" href="{Field url}">
+											<h3 class="fw-bold fs-5 ls-n1">
+												<field title=""></field>
+											</h3>
+										</a>
+										<p class="text-body text-opacity-50">
+											<field publish_date="" format="F j, Y"></field>
+										</p>
+									</div>
+								</div>
+							</div>
+
+						</loop>
+					</div>
+				</tangible>
+			</wrapper>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,89 @@
+/* ============  CUSTOM.SCSS: ADD HERE YOUR OWN PROJECT'S  SCSS OR plain CSS CODE. ============ 
+/* ============  THEN, DONT' FORGET TO RECOMPILE IN ORDER TO REBUILD YOUR CSS BUNDLE. ============ 
+ 
+
+WHAT DO I NEED TO KNOW BEFORE WORKING
+
+    This is the general process to make visual customizations:
+
+    1. Edit this file, add your own CSS/SCSS code, save the file.
+
+    2. View the page in your browser, while logged in as administrator.
+    
+    3. Click the "SASS" symbol on the WP admin bar on the page top.
+    
+    Compiling will start, and a feedback window will be shown.
+
+    The /sass/main.scss file will be compiled to a static CSS.
+    
+    This CSS is the only one that the theme enqueues.
+
+    As a side note,  the file static CSS name is customizable as well - see functions.php
+
+IMPORTANT INFORMATION  -  IF YOU DON'T WANT TO REINVENT THE WHEEL: 
+
+    Before adding CSS, try to see if there isn't already an utility class for that:
+    please take your time to understand and study how Bootstrap works.
+
+    Many times you DON'T NEED to write custom CSS.
+    
+    Try using Bootstrap classes first.
+
+    It can save you a lot of time,
+    eg. to standardize project colors, or fully customize typography.
+
+    First of all, have a ride in the WordPress Customizer.
+    Set your project variables,
+    So that simple classes like text-primary or bg-primary will refer to your brand color.
+    
+    Take your time to learn to use Bootstrap 5 classes and utility classes especially.
+    
+    Documentation: https://getbootstrap.com/docs/5.3/utilities/background/
+
+    To explore things further, please note that picostrap actually implements also BootstrapNinja,
+    a small set of SCSS files that supercharges Bootstrap, mostly using it's own Utilities API, or custom SASS
+    scripts, to create some more utility classes.
+    We built BootstrapNinja with the spirit of offering developers a richer suitcase of reliable tools, supercharging Bootstrap wi
+    with some ideas inspired by Tailwind - and our own experience.
+
+    Please take your time to learn using these classes.
+
+    Documentation: https://bootstrap.ninja/ninjabootstrap/
+
+IMPORTANT NOTE REGARDING PATHS FOR REFERENCING ELEMENTS IN THE THEME FOLDER
+    
+    Please prepend ../ in the path, as the rendered CSS
+    that is executed from the browser is in the /css-output/ theme subfolder    
+
+
+************************************************		                        */
+
+/* ============  SOME USEFUL CSS SNIPPETS YOU MIGHT NEED ============ */
+
+//a demo statement - uncomment me as a test to see page turn red and blush. Compile afterwards!
+//body { background: red; opacity: 0.4;border:5px solid yellow}  
+
+//open menus on hover
+//.dropdown:hover>.dropdown-menu { display: block;}
+
+// DETECT IF PAGE HAS SCROLLED
+// From the Customizer, enable the "Scroll Detection" feature to be able to use the classes:
+
+//body.scroll-position-at-top  {background:lime}
+//body.scroll-position-not-at-top {background:red}
+
+ 
+// HOW TO INCLUDE A CUSTOM FONT
+//1. Upload the .woff2 font file in the /fonts/ folder 
+//2. Uncomment/Adjust and use the code snippet below 
+//3. Open the Customizer and declare the font in the "Font Family Base" / "Headings Font Family" field
+
+// include custom font
+//@font-face {
+//  font-family: 'Playfair Display';
+//  src: url('../fonts/playfair-display.woff2') format('woff2');
+//}
+ 
+/* ============  WRITE YOUR PROJECT CODE BELOW ============ */
+
+

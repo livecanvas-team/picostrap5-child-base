@@ -1,0 +1,18 @@
+///////////////////////////////////////////////////
+// MAIN.SCSS
+// THIS IS THE MAIN SCSS PIPELINE START
+//////////////////////////////////////////////////
+ 
+//IMPORT BOOTSTRAP 
+@import "bootstrap-loader"; 
+
+
+// THE THEME STUFF 
+@import "wp_basic_styles";      
+@import "picostrap";  
+@import "woocommerce";
+
+
+// CUSTOM CSS : THE CHILD THEME STUFF, IF ITS THERE
+@import "custom";
+

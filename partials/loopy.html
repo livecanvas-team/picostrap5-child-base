@@ -1,0 +1,39 @@
+<tangible>
+
+    <div class="position-relative">
+        <div class="row">
+            <div class="col-12">
+                <if field="image">
+
+                    <img loading="lazy" src="{Field image_url size='large'}" srcset="{Field image_srcset}"
+                        sizes="{Field image_sizes}" class="img-fluid mb-3 w-100 object-fit-cover rounded-3 shadow"
+                        style="aspect-ratio:4/3" alt="{Field image_alt}">
+
+                    <else>
+                        <img loading="lazy" src="https://placehold.co/300x200"
+                            class="img-fluid mb-3 w-100 object-fit-cover rounded-3 shadow" style="aspect-ratio:4/3"
+                            alt="Placeholder">
+                    </else>
+                </if>
+            </div>
+            <div class="col-12">
+                <a class="stretched-link text-decoration-none" href="{Field url}">
+                    <h3 class="fw-bold fs-3 ls-n1">
+                        <field name="title">
+                        </field>
+                    </h3>
+                </a>
+                <p class="text-body text-opacity-50">
+                    <field name="publish_date" date_format="F j, Y">
+                    </field>
+                    [lc_the_excerpt]
+                    <field name="excerpt" auto="true" words="20" more="..."></field>
+
+                </p>
+
+
+            </div>
+        </div>
+    </div>
+
+</tangible>

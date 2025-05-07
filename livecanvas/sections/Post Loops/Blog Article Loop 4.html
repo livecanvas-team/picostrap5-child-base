@@ -1,0 +1,61 @@
+<section>
+	<div class="container py-6 py-lg-8">
+		<div class="row mb-5 text-center">
+			<div class="col mw-10 mx-auto">
+				<div class="lc-block mb-4">
+					<div editable="rich">
+						<p class="badge bg-primary mb-2">LATEST NEWS</p>
+					</div>
+					<div editable="rich">
+						<h2 class="display-4 fw-bold ls-n1">News &amp; Articles</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="lc-block">
+			<wrapper class="live-shortcode">
+				<tangible>
+					<div id="archiveHomePosts" class="row g-3">
+						<loop type="post" count="10">
+							<div class="col-12 py-5 border-top">
+								<div class="row align-items-center">
+									<div class="col-lg-auto mb-3 mb-lg-0">
+										<if field="image">
+											<img src="{Field image_url size='thumbnail'}" class="img-fluid" alt="{Field image_alt}">
+											<else>
+												<img src="https://placehold.co/150" class="img-fluid" alt="Placeholder">
+											</else>
+										</if>
+									</div>
+
+									<div class="col-lg-9 mb-3 mb-lg-0">
+										<div class="mw-8">
+											<span class="text-body text-opacity-75 mb-1 d-block">
+												<field publish_date="" format="M j, Y">
+												</field>
+											</span>
+											<h3 class="fw-bold">
+												<field title="">
+												</field>
+											</h3>
+										</div>
+									</div>
+
+									<div class="col-lg-auto ms-auto text-end">
+										<a class="d-inline-flex align-items-center fw-semibold icon-link icon-link-hover" href="{Field url}">
+											<span>Read</span>
+											<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="bi bi-arrow-right animate-bounce" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+												<path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"></path>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+						</loop>
+					</div>
+				</tangible>
+			</wrapper>
+		</div>
+	</div>
+</section>

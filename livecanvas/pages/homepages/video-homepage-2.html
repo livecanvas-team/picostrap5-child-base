@@ -1,0 +1,291 @@
+<section>
+	<div class="row flex-lg-row-reverse g-0 position-relative">
+		<div class="col-lg-6">
+			<div class="lc-block h-100 vh-100" lc-helper="video-bg">
+				<video id="video-5001" class="img-fluid object-fit-cover w-100 h-100" style="z-index:1; object-position: 50% 50%;" autoplay="" preload="" muted="" loop="" playsinline="">
+					<!-- adjust object-position to tweak cropping on mobile -->
+					<source src="https://cdn.livecanvas.com/media/videos/100920-video-720.mp4" type="video/mp4">
+				</video>
+			</div>
+
+			<script>
+                        //////////////// interaction observer VIDEO: pauses when video is not seen
+                        if (!!window.IntersectionObserver) {
+                            let video = document.querySelector('#video-5001');
+                            let isPaused = true; /* flag for auto-pausing of the video */
+                            let observer = new IntersectionObserver((entries, observer) => {
+                                entries.forEach(entry => {
+                                    if (entry.intersectionRatio != 1 && !video.paused) {
+                                        video.pause(); isPaused = true;
+                                        console.log('video-5001 paused');
+                                    }
+                                    else if (isPaused) {
+                                        video.play(); isPaused = false;
+                                        console.log('video-5001 play');
+                                    }
+                                });
+                            }, { threshold: 1 });
+                            observer.observe(video);
+                        }
+                        ////////////////////////////////////////////////////////////////////////
+                    </script>
+
+
+
+		</div>
+		<div class="col-lg-6 align-self-center g-4 g-lg-8 position-absolute position-lg-relative start-lg-0 top-lg-0 bg-body bg-opacity-50 py-4 ">
+
+
+			<div class="lc-block">
+				<div editable="rich">
+					<h1 class="display-4">Hello Adventure!</h1>
+					<p class="lead">Lorem ipsum dolor sit amet, <strong>consectetur adipiscing</strong>
+						elit. <br>Nullam tincidunt enim ac augue suscipit rhoncus.<br><strong>Donec ante erat</strong>, hendrerit sed
+						eleifend et, dapibus at leo.<br>Mauris bibendum mi ut dui sagittis volutpat.</p>
+				</div>
+			</div>
+
+
+			<div class="lc-block">
+				<a class="btn btn-primary" href="#" role="button">Click me, I'm a button</a>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="hero-section">
+	<div class="row flex-lg-row-reverse g-0">
+		<div class="col-lg-6">
+			<div class="lc-block h-100 vh-100" lc-helper="video-bg">
+				<video id="video-5001" class="img-fluid object-fit-cover w-100 h-100" style="z-index:1; object-position: 50% 50%;" autoplay="" preload="" muted="" loop="" playsinline="">
+					<!-- adjust object-position to tweak cropping on mobile -->
+					<source src="https://cdn.livecanvas.com/media/videos/100920-video-720.mp4" type="video/mp4">
+				</video>
+			</div>
+
+			<script>
+                        //////////////// interaction observer VIDEO: pauses when video is not seen
+                        if (!!window.IntersectionObserver) {
+                            let video = document.querySelector('#video-5001');
+                            let isPaused = true; /* flag for auto-pausing of the video */
+                            let observer = new IntersectionObserver((entries, observer) => {
+                                entries.forEach(entry => {
+                                    if (entry.intersectionRatio != 1 && !video.paused) {
+                                        video.pause(); isPaused = true;
+                                        console.log('video-5001 paused');
+                                    }
+                                    else if (isPaused) {
+                                        video.play(); isPaused = false;
+                                        console.log('video-5001 play');
+                                    }
+                                });
+                            }, { threshold: 1 });
+                            observer.observe(video);
+                        }
+                        ////////////////////////////////////////////////////////////////////////
+                    </script>
+
+
+
+		</div>
+		<div class="col-lg-6 align-self-center g-4 g-lg-8">
+			<div class="lc-block">
+				<div editable="rich">
+					<h1 class="display-2">Embark on Your Next Great Adventure</h1>
+					<p class="lead">Discover breathtaking landscapes and embrace the <strong>thrill of the unknown</strong>. <br>Our curated experiences offer unforgettable journeys for every explorer.<br><strong>Whether you seek</strong> mountain peaks or ocean depths,<br>your next story starts here.</p>
+				</div>
+			</div>
+
+
+			<div class="lc-block">
+				<a class="btn btn-primary" href="#" role="button">Explore Trips</a>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="py-4 py-lg-0">
+	<div class="row g-0">
+		<div class="col-lg-6">
+			<div class="lc-block h-100 vh-100" lc-helper="video-bg">
+				<video id="video-5002" class="img-fluid object-fit-cover w-100 h-100" style="z-index:1; object-position: 50% 50%;" autoplay="" preload="" muted="" loop="" playsinline="">
+					<!-- adjust object-position to tweak cropping on mobile -->
+					<source src="https://cdn.livecanvas.com/media/videos/100899-video-720.mp4" type="video/mp4">
+				</video>
+			</div>
+
+			<script>
+                        //////////////// interaction observer VIDEO: pauses when video is not seen
+                        if (!!window.IntersectionObserver) {
+                            let video = document.querySelector('#video-5002');
+                            let isPaused = true; /* flag for auto-pausing of the video */
+                            let observer = new IntersectionObserver((entries, observer) => {
+                                entries.forEach(entry => {
+                                    if (entry.intersectionRatio != 1 && !video.paused) {
+                                        video.pause(); isPaused = true;
+                                        console.log('video-5002 paused');
+                                    }
+                                    else if (isPaused) {
+                                        video.play(); isPaused = false;
+                                        console.log('video-5002 play');
+                                    }
+                                });
+                            }, { threshold: 1 });
+                            observer.observe(video);
+                        }
+                        ////////////////////////////////////////////////////////////////////////
+                    </script>
+
+
+
+		</div>
+		<div class="col-lg-6 align-self-center g-4 g-lg-8">
+			<div class="lc-block">
+				<div editable="rich">
+					<h2 class="display-5">Ride the Perfect Wave</h2>
+					<p class="lead">Feel the ocean's power beneath your feet. We guide you to the <strong>world's best surf spots</strong>, offering lessons for beginners and challenges for pros.<br><strong>Dive into the surfing lifestyle</strong> and let the waves guide you.<br>Experience the ultimate connection with the sea.</p>
+				</div>
+			</div>
+
+
+			<div class="lc-block">
+				<a class="btn btn-primary" href="#" role="button">Find Your Break</a>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="py-4 py-lg-0">
+	<div class="row flex-lg-row-reverse g-0">
+		<div class="col-lg-6">
+			<div class="lc-block h-100 vh-100" lc-helper="video-bg">
+				<video id="video-5003" class="img-fluid object-fit-cover w-100 h-100" style="z-index:1; object-position: 50% 50%;" autoplay="" preload="" muted="" loop="" playsinline="">
+					<!-- adjust object-position to tweak cropping on mobile -->
+					<source src="https://cdn.livecanvas.com/media/videos/100893-video-720.mp4" type="video/mp4">
+				</video>
+			</div>
+
+			<script>
+                        //////////////// interaction observer VIDEO: pauses when video is not seen
+                        if (!!window.IntersectionObserver) {
+                            let video = document.querySelector('#video-5003');
+                            let isPaused = true; /* flag for auto-pausing of the video */
+                            let observer = new IntersectionObserver((entries, observer) => {
+                                entries.forEach(entry => {
+                                    if (entry.intersectionRatio != 1 && !video.paused) {
+                                        video.pause(); isPaused = true;
+                                        console.log('video-5003 paused');
+                                    }
+                                    else if (isPaused) {
+                                        video.play(); isPaused = false;
+                                        console.log('video-5003 play');
+                                    }
+                                });
+                            }, { threshold: 1 });
+                            observer.observe(video);
+                        }
+                        ////////////////////////////////////////////////////////////////////////
+                    </script>
+
+
+
+		</div>
+		<div class="col-lg-6 align-self-center g-4 g-lg-8">
+			<div class="lc-block">
+				<div editable="rich">
+					<h2 class="display-5">Explore Hidden Trails</h2>
+					<p class="lead">Venture off the beaten path and uncover <strong>nature's secrets</strong>. Our guided hikes take you through stunning terrains, from lush forests to rugged coastlines.<br><strong>Find your path</strong> and connect with the wild.<br>Let the journey rejuvenate your spirit.</p>
+				</div>
+			</div>
+
+
+			<div class="lc-block">
+				<a class="btn btn-primary" href="#" role="button">Discover Hikes</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="py-4 py-lg-6">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<div class="lc-block mb-4">
+
+					<h2 editable="inline" class="display-2">What Our Adventurers Say</h2>
+					<p editable="inline" class=""> Hear from fellow travelers who turned their adventure dreams into reality with us. Their stories inspire and showcase the possibilities.</p>
+				</div><!-- /lc-block -->
+			</div>
+		</div>
+
+		<div class="row mt-4">
+			<div class="col-md-8 offset-md-2">
+				<div class="lc-block">
+					<div id="testimonial-slider" class="carousel slide" data-bs-ride="carousel">
+
+						<!-- Indicators -->
+						<ul class="carousel-indicators list-unstyled">
+							<li data-bs-target="#testimonial-slider" data-bs-slide-to="0" class="active" aria-current="true"></li>
+							<li data-bs-target="#testimonial-slider" data-bs-slide-to="1" class=""></li>
+							<li data-bs-target="#testimonial-slider" data-bs-slide-to="2" class=""></li>
+						</ul>
+
+						<!-- The slideshow -->
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MXx8c3VyZmVyfGVufDB8MHx8fDE2MzQ4MzU3NDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768" alt="Photo by Jeremy Bishop" srcset="https://images.unsplash.com/photo-1502680390469-be75c86b636f?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MXx8c3VyZmVyfGVufDB8MHx8fDE2MzQ4MzU3NDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1502680390469-be75c86b636f??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MXx8c3VyZmVyfGVufDB8MHx8fDE2MzQ4MzU3NDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1502680390469-be75c86b636f??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MXx8c3VyZmVyfGVufDB8MHx8fDE2MzQ4MzU3NDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1502680390469-be75c86b636f??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MXx8c3VyZmVyfGVufDB8MHx8fDE2MzQ4MzU3NDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1502680390469-be75c86b636f??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MXx8c3VyZmVyfGVufDB8MHx8fDE2MzQ4MzU3NDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768">
+								<div class="carousel-caption text-white">
+									<p editable="inline">An absolutely life-changing trip! The guides were knowledgeable, and the scenery was beyond words. Can't wait for my next adventure with them.&nbsp;</p>
+									<h5 editable="inline"><strong>Alex Johnson</strong></h5>
+									<small editable="inline" style="letter-spacing:1px">Avid Surfer&nbsp;</small>
+								</div>
+
+
+							</div>
+							<div class="carousel-item">
+								<img src="https://images.unsplash.com/photo-1526485856375-9110812fbf35?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NXx8c3VyZmVyfGVufDB8MHx8fDE2MzQ4MzU3NDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768" alt="Photo by Guy Kawasaki" srcset="https://images.unsplash.com/photo-1526485856375-9110812fbf35?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NXx8c3VyZmVyfGVufDB8MHx8fDE2MzQ4MzU3NDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1526485856375-9110812fbf35??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NXx8c3VyZmVyfGVufDB8MHx8fDE2MzQ4MzU3NDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1526485856375-9110812fbf35??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NXx8c3VyZmVyfGVufDB8MHx8fDE2MzQ4MzU3NDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1526485856375-9110812fbf35??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NXx8c3VyZmVyfGVufDB8MHx8fDE2MzQ4MzU3NDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1526485856375-9110812fbf35??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NXx8c3VyZmVyfGVufDB8MHx8fDE2MzQ4MzU3NDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768">
+								<div class="carousel-caption text-white">
+									<p editable="inline">From the waves to the trails, every moment was perfectly organized. The best way to truly experience the beauty of the coast.&nbsp;</p>
+									<h5 editable="inline"><strong>Samira Khan</strong></h5>
+									<small editable="inline" style="letter-spacing:1px">World Traveler&nbsp;</small>
+								</div>
+
+
+							</div>
+							<div class="carousel-item ">
+								<img src="https://images.unsplash.com/photo-1486432155089-343c871b640f?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8c3VyZmVyfGVufDB8MHx8fDE2MzQ4MzU3NDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768" alt="Photo by Alex Shutin" srcset="https://images.unsplash.com/photo-1486432155089-343c871b640f?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8c3VyZmVyfGVufDB8MHx8fDE2MzQ4MzU3NDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1486432155089-343c871b640f??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8c3VyZmVyfGVufDB8MHx8fDE2MzQ4MzU3NDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1486432155089-343c871b640f??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8c3VyZmVyfGVufDB8MHx8fDE2MzQ4MzU3NDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1486432155089-343c871b640f??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8c3VyZmVyfGVufDB8MHx8fDE2MzQ4MzU3NDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1486432155089-343c871b640f??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8c3VyZmVyfGVufDB8MHx8fDE2MzQ4MzU3NDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768">
+								<div class="carousel-caption text-white">
+									<p editable="inline">Highly recommended for anyone seeking adventure! The team's passion is infectious, and they ensure you have an unforgettable experience.&nbsp;</p>
+									<h5 editable="inline"><strong>Carlos Gomez</strong></h5>
+									<small editable="inline" style="letter-spacing:1px">Hiking Enthusiast&nbsp;</small>
+								</div>
+
+
+							</div>
+
+						</div>
+
+						<!-- Left and right controls -->
+						<a class="carousel-control-prev" href="#testimonial-slider" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon"></span>
+						</a>
+						<a class="carousel-control-next" href="#testimonial-slider" data-bs-slide="next">
+							<span class="carousel-control-next-icon"></span>
+						</a>
+
+					</div>
+				</div>
+			</div><!-- /col -->
+		</div>
+	</div>
+</section>
+
+<section class="d-flex text-center min-vh-50 bg-body bg-opacity-25" lc-helper="background" style=" background-attachment: fixed; background-size:cover; background-position: center center;background-blend-mode:overlay;background-image: url(https://images.unsplash.com/photo-1470214304380-aadaedcfff84?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NTJ8fG9jZWFuJTIwc3VyZnxlbnwwfDB8fHwxNjM0ODM1Mjkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768);">
+	<div class="lc-block  my-3 align-self-center w-100 py-5">
+		<div editable="rich">
+			<h2 class="display-4">Ready for an Adventure?</h2>
+			<h2 class="display-4">Start Your Journey Today!</h2>
+			<p class="">Don't just dream about your next escape. Make it happen.<br>&nbsp;Explore our destinations and book your adventure now.</p>
+			<p class="">Unforgettable experiences await.</p>
+		</div>
+		<a class="btn btn-lg btn-primary" href="#" role="button">Book Your Trip</a>
+	</div>
+
+</section>

@@ -1,0 +1,80 @@
+<section>
+	<div class="container py-6 py-lg-10">
+		<div class="row">
+			<div class="col-12 text-center">
+				<div class="lc-block mb-lg-5">
+					<div>
+						<h2 class="display-5 fw-bold ls-n1">Our Latest Articles</h2>
+					</div>
+					<div>
+						<p class="lead">Stay informed with our most recent articles covering a wide range of topics.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Swiper Container -->
+		<div class="lc-block ">
+			<wrapper class="live-shortcode">
+				<div class="swiper" id="sc-article-loop-RANDOMID">
+					<tangible>
+						<div class="swiper-wrapper mb-5">
+							<!-- Each Slide -->
+							<loop type="post" count="8">
+								<div class="swiper-slide">
+									<div class="ratio ratio-21x9 mb-3">
+										<if field="image">
+											<img src="{Field image_url size=large}" class="img-fluid object-fit-cover w-100 h-100 rounded" alt="{Field image_alt}">
+											<else>
+												<img src="https://placehold.co/600x400" class="img-fluid object-fit-cover w-100 h-100 rounded" alt="Placeholder">
+											</else>
+										</if>
+									</div>
+									<div>
+										<h3 class="fw-semibold h5 mb-2">
+											<a href="{Field url}" class="text-decoration-none">
+												<field title="">
+												</field>
+											</a>
+										</h3>
+										<p class="text-body text-opacity-75">
+											<field publish_date="" format="F j, Y"></field>
+										</p>
+									</div>
+								</div>
+							</loop>
+							
+						</div>
+						<!-- Swiper Pagination -->
+						<div class="swiper-pagination"></div>
+					</tangible>
+				</div>
+			</wrapper>
+
+
+		</div>
+	</div>
+
+	<!-- Swiper CSS and JS -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+	<script defer="" src="https://unpkg.com/swiper@8/swiper-bundle.min.js" onload="initializeSwiperRANDOMID();"></script>
+
+	<!-- Initialize Swiper -->
+	<script>
+    function initializeSwiperRANDOMID() {
+      var swiper = new Swiper("#sc-article-loop-RANDOMID", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          640: { slidesPerView: 1, spaceBetween: 20 },
+          768: { slidesPerView: 2, spaceBetween: 30 },
+          1024: { slidesPerView: 3, spaceBetween: 30 },
+        },
+      });
+    }
+  </script>
+</section>

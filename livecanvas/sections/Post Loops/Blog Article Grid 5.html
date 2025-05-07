@@ -1,0 +1,107 @@
+<section>
+	<div class="container py-6 py-lg-8">
+		<div class="row mb-5 text-center">
+			<div class="col mw-10 mx-auto">
+				<div class="lc-block mb-4">
+					<div editable="rich">
+						<p class="badge bg-primary mb-2">LATEST NEWS</p>
+					</div>
+					<div editable="rich">
+						<h2 class="display-4 fw-bold ls-n1">News &amp; Articles</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="lc-block">
+			<wrapper class="live-shortcode">
+				<tangible>
+					<div id="sc-grid-article-loop-RANDOMID" class="mb-4 d-grid gap-5">
+						<loop type="post" count="4">
+							<div class="posts_loop position-relative h-100 d-flex flex-column justify-content-end">
+								<div class="position-absolute w-100 h-100 rounded-3" style="background-color: rgba(var(--bs-body-color-rgb),.2);">
+									<if field="image">
+										<img src="{Field image_url size='large'}" class="img-fluid object-fit-cover w-100 h-100" style="mix-blend-mode: overlay;" alt="{Field image_alt}">
+										<else>
+											<img src="https://placehold.co/600x400" class="img-fluid object-fit-cover w-100 h-100" style="mix-blend-mode: overlay;" alt="Placeholder">
+										</else>
+									</if>
+								</div>
+
+								<div class="card bg-transparent border-0">
+									<div class="card-body">
+										<span class="d-block text-body text-opacity-75 mb-1">
+											<field publish_date="" format="M j, Y">
+											</field>
+										</span>
+										<h3 class="h4 fw-bold mb-2">
+											<field title="">
+											</field>
+										</h3>
+										<div class="excerpt d-block">
+											<field excerpt="" length="20" auto="true">
+											</field>
+										</div>
+										<a class="link-primary stretched-link" href="{Field url}">Read More</a>
+									</div>
+								</div>
+							</div>
+						</loop>
+					</div>
+
+					<style>
+            /* Base styles for mobile-first design */
+            #sc-grid-article-loop-RANDOMID {
+              grid-template-columns: 1fr;
+            }
+
+            .posts_loop h3 {transition: .5s;}
+            .posts_loop:hover h3 {color: var(--bs-primary); transition: .5s;}
+
+            /* Adjust for larger screens (lg and up) */
+            @media (min-width: 992px) {
+              #sc-grid-article-loop-RANDOMID {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+              }
+
+              #sc-grid-article-loop-RANDOMID .posts_loop:nth-child(1) {
+                grid-column: 1 / 2;
+                grid-row: 1 / 4;
+              }
+
+              #sc-grid-article-loop-RANDOMID .posts_loop:nth-child(2),
+              #sc-grid-article-loop-RANDOMID .posts_loop:nth-child(3),
+              #sc-grid-article-loop-RANDOMID .posts_loop:nth-child(4) {
+                grid-column: 2 / 3;
+              }
+
+              #sc-grid-article-loop-RANDOMID .posts_loop:nth-child(2) {
+                grid-row: 1 / 2;
+              }
+
+              #sc-grid-article-loop-RANDOMID .posts_loop:nth-child(3) {
+                grid-row: 2 / 3;
+              }
+
+              #sc-grid-article-loop-RANDOMID .posts_loop:nth-child(4) {
+                grid-row: 3 / 4;
+              }
+            }
+
+            /* Specific styles for the first post */
+            @media (min-width: 992px) {
+              #sc-grid-article-loop-RANDOMID .posts_loop:first-child p {
+                font-size: 1.4rem !important;
+              }
+
+              #sc-grid-article-loop-RANDOMID .posts_loop:first-child h3 {
+                font-size: 2rem !important;
+              }
+            }
+          </style>
+				</tangible>
+			</wrapper>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,94 @@
+<section>
+	<div class="container py-6 py-lg-8">
+		<div class="row mb-5 text-center">
+			<div class="col mw-10 mx-auto">
+				<div class="lc-block mb-4">
+					<div editable="rich">
+						<p class="badge bg-primary mb-2">LATEST NEWS</p>
+					</div>
+					<div editable="rich">
+						<h2 class="display-4 fw-bold ls-n1">News &amp; Articles</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="lc-block">
+			<wrapper class="live-shortcode">
+				<tangible>
+					<div id="lc-grid-article-loop-RANDOMID" class="mb-4 d-grid gap-5">
+						<Loop type="post" count="4">
+							<div class="posts_loop position-relative">
+								<div class="post gap-3">
+									<div class="col">
+										<If field="image">
+											<img src="{Field image_url size='large'}"
+												class="img-fluid object-fit-cover w-100" style="aspect-ratio:4/3"
+												alt="{Field image_alt}" />
+											<Else />
+											<img src="https://placehold.co/600x400"
+												class="img-fluid object-fit-cover w-100" style="aspect-ratio:4/3"
+												alt="Placeholder" />
+										</If>
+									</div>
+									<div class="content d-flex flex-column">
+										<span class="d-block text-body text-opacity-75 mb-1">
+											<Field publish_date format="M j, Y" />
+										</span>
+										<h3 class="h5 fw-bold mb-1">
+											<Field title />
+										</h3>
+									</div>
+									<a class="link-body-emphasis stretch ed-link" href="{Field url}">Read More</a>
+								</div>
+							</div>
+						</Loop>
+					</div>
+
+					<style>
+						/* Grid layout adjustments */
+						#lc-grid-article-loop-RANDOMID {
+							grid-template-columns: 1fr;
+						}
+
+						@media (min-width: 992px) {
+							#lc-grid-article-loop-RANDOMID {
+								grid-template-columns: 2fr 1fr;
+							}
+
+							#lc-grid-article-loop-RANDOMID .posts_loop:first-child {
+								grid-column: 1 / 2;
+								grid-row: 1 / 4;
+							}
+
+							#lc-grid-article-loop-RANDOMID .posts_loop:not(:first-child) {
+								grid-column: 2 / 3;
+							}
+						}
+
+						#lc-grid-article-loop-RANDOMID .post {
+							display: grid;
+							grid-template-columns: 128px 1fr;
+						}
+
+						@media (min-width: 992px) {
+							#lc-grid-article-loop-RANDOMID .posts_loop:first-child .post {
+								grid-template-columns: 1fr;
+								gap: 10px;
+							}
+
+							#lc-grid-article-loop-RANDOMID .posts_loop:first-child .post img {
+								width: 100%;
+								height: auto;
+							}
+
+							#lc-grid-article-loop-RANDOMID .posts_loop:first-child .post .content h3 {
+								font-size: 2rem;
+							}
+						}
+					</style>
+				</tangible>
+			</wrapper>
+		</div>
+	</div>
+</section>

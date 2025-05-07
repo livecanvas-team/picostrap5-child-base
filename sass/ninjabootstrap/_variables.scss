@@ -1,0 +1,22 @@
+//some smart defaults for Bootstrap
+
+
+//CUSTOM SPACING 
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: ($spacer * 4.5),  //added
+  7: ($spacer * 6), //added
+  8: ($spacer * 7.5), //added
+  9: ($spacer * 9), //newly added
+  10: ($spacer * 10), //newly added
+  
+) !default;
+
+//ENABLE NEGATIVE MARGIN UTILITY CLASSES
+$enable-negative-margins: true;
