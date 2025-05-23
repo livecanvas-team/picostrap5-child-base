@@ -51,14 +51,6 @@ add_action( 'wp_enqueue_scripts', function() {
 //register_nav_menus( array( 'third' => __( 'Third Menu', 'picostrap' ), 'fourth' => __( 'Fourth Menu', 'picostrap' ), 'fifth' => __( 'Fifth Menu', 'picostrap' ), ) );
 // THEN USE SHORTCODE:  [lc_nav_menu theme_location="third" container_class="" container_id="" menu_class="navbar-nav"]
 
-
-// CHECK PARENT THEME VERSION
-add_action( 'admin_notices', function  () {
-    if( (pico_get_parent_theme_version())>=3.0) return; 
-	$message = __( 'This Child Theme requires at least Picostrap Version 3.0.0  in order to work properly. Please update the parent theme.', 'picostrap' );
-	printf( '<div class="%1$s"><h1>%2$s</h1></div>', esc_attr( 'notice notice-error' ), esc_html( $message ) );
-} );
-
 // OPTIONAL: FOR SECURITY: DISABLE APPLICATION PASSWORDS. Uncomment if needed
 //add_filter( 'wp_is_application_passwords_available', '__return_false' );
 
