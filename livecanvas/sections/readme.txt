@@ -23,3 +23,8 @@ What are LiveCanvas Sections?
 
 
 Your own HTML snippets intended as small, atomic "starters" you can use as blueprints and re-edit in the LiveCanvas editor.
+
+
+See Also
+
+https://docs.livecanvas.com/integrating-ui-kits/
