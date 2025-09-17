@@ -19,6 +19,9 @@
 
 */
 
+//LOAD LC CONFIG TO DEFINE FRAMEWORK
+require_once ("livecanvas/configuration.php");
+
 // DE-ENQUEUE PARENT THEME BOOTSTRAP JS BUNDLE
 add_action( 'wp_print_scripts', function(){
     wp_dequeue_script( 'bootstrap5' );
